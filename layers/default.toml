@@ -3,6 +3,7 @@ parent = "tedge-rugpi-core/tedge"
 
 recipes = [
     "tedge-rugpi-core/defaults",
+    "tedge-rugpi-core/docker"
 ]
 
 [parameters."core/apt-cleanup"]
