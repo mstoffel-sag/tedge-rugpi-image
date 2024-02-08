@@ -38,6 +38,7 @@ publish_version() {
             c8y firmware update -n --name "$NAME" --deviceType "$DEVICE_TYPE" --delay "1s" --force 
         else
             c8y firmware create -n --name "$NAME" --deviceType "$DEVICE_TYPE" --delay "1s" --force
+        fi
         # create version if it does not already exist
         if ! c8y firmware versions get -n --firmware "$NAME" --id "$VERSION" >/dev/null 2>&1; then
             c8y firmware versions create -n --firmware "$NAME" --version "$VERSION" --url "$url" --force
