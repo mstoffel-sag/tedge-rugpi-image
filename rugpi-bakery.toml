@@ -1,7 +1,5 @@
 [repositories]
-tedge-rugpi-core = { git = "https://github.com/mstoffel-sag/tedge-rugpi-core.git", branch = "dev" }
-
-
+tedge-rugpi-core = { git = "https://github.com/thin-edge/tedge-rugpi-core.git" }
 
 # Image for Raspberry Pi 4, 5, CM4, 400
 [images.tryboot]
