@@ -33,6 +33,8 @@ publish_version() {
     fi
 
     if [ -n "$NAME" ] && [ -n "$VERSION" ] && [ -n "$url" ]; then
+        # Set from draft to pre-release
+        gh release edit --draft=false --prerelease $TAG
         # Create/Update firmware name (if it does not already exist)
         if c8y firmware get -n --id "$NAME"  >/dev/null 2>&1; then
             c8y firmware update -n --id "$NAME" --deviceType "$DEVICE_TYPE" --delay "1s" --force 
